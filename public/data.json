@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "How to get your first job as a self-taught programmer",
+    "authorImage": "https://www.pngfind.com/pngs/m/317-3177131_636682202684372240-user-profile-photo-round-hd-png-download.png",
+    "image": "https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Conway Brooks",
+    "Publish": "Mar-14(4 days ago)",
+    "readTime": 5
+  },
+  {
+    "id": "2",
+    "title": "How you can learn about Programming?",
+    "authorImage": "https://oliver-andersen.se/wp-content/uploads/2018/03/cropped-Profile-Picture-Round-Color.png",
+    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Chrystal Ballard",
+    "Publish": "Mar-8(10 days ago)",
+    "readTime": 10
+  },
+  {
+    "id": "3",
+    "title": "Are you passionate about programming?Let's talk about What is it?",
+    "authorImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1fTlnz5L4wjlrDcx91vBh1IZkUl_T36cRQ&usqp=CAU",
+    "image": "https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "name": "Mai Romero",
+    "Publish": "May-14(5 days ago)",
+    "readTime": 8
+  },
+  {
+    "id": "4",
+    "title": "How you can gain extra knowledge about something you want?",
+    "authorImage": "https://www.microsoftpartnercommunity.com/t5/image/serverpage/image-id/9194i0386CCAA7F026B59/image-size/large/is-moderation-mode/true?v=v2&px=999",
+    "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGVhcm5pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "name": "Long Hendrix",
+    "Publish": "Feb-14(1 days ago)",
+    "readTime": 12
+  }
+]
