@@ -10,14 +10,13 @@ const Main = () => {
   }, []);
   return (
     <div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-12 mx-2 mt-5 gap-3">
-        <div className=" md:col-span-9">
-          <h1>Main Content</h1>
+      <div className="grid sm:grid-cols-1 md:grid-cols-12 mx-2 mt-5 gap-3 ">
+        <div className=" md:col-span-9   bg-indigo-400 rounded-3xl p-5">
           {data.map((blog) => (
             <Card blog={blog} key={blog.id}></Card>
           ))}
         </div>
-        <div className=" bg-red-600 md:col-span-3 text-center">
+        <div className=" bg-indigo-400 rounded-3xl text-white md:col-span-3 text-center">
           <h3>side content</h3>
         </div>
       </div>

@@ -4,21 +4,42 @@ const Card = ({ blog }) => {
   console.log(blog);
   const { id, title, authorImage, image, name, readTime, Publish } = blog;
   return (
-    <div className=" w-[700px] mx-auto mb-5">
-      <div className="card card-compact w-auto border h-[500px] bg-base-100 shadow-xl">
+    <div className=" md:w-[700px] mx-auto mb-5">
+      <div className="card card-compact w-auto border-2 border-orange-500 h-[500px] bg-base-100 shadow-xl">
         <figure>
           <img className="w-full" src={image} alt="Cover Photo" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{title}</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+          <div className="flex justify-between items-center ">
+            <div className="flex items-center gap-2">
+              <img className="rounded-full w-14" src={authorImage} alt="" />
+              <div>
+                <h4>{name}</h4>
+                <p>{Publish}</p>
+              </div>
+            </div>
+
+            <div>
+              <p>{readTime} min read</p>
+            </div>
+          </div>
+          <h1 className="card-title text-4xl">{title}</h1>
+          <p>#beginners #Programming</p>
+          <div className="leading-loose card-actions">
+            <button
+              onClick={() => handleReadTime(id)}
+              className="text-blue-500"
+            >
+              Mark as read
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
+};
+const handleReadTime = (id) => {
+  console.log(id);
 };
 
 export default Card;
