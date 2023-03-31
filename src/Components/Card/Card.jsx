@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import React from "react";
 
 const Card = ({ blog }) => {
@@ -19,19 +21,19 @@ const Card = ({ blog }) => {
               </div>
             </div>
 
-            <div>
+            <div className="flex justify-center items-center gap-2">
               <p>{readTime} min read</p>
+              <FontAwesomeIcon
+                className="cursor-pointer"
+                onClick={() => handleReadTime(id)}
+                icon={faBookmark}
+              />
             </div>
           </div>
           <h1 className="card-title text-4xl">{title}</h1>
           <p>#beginners #Programming</p>
           <div className="leading-loose card-actions">
-            <button
-              onClick={() => handleReadTime(id)}
-              className="text-blue-500"
-            >
-              Mark as read
-            </button>
+            <button className="text-blue-500">Mark as read</button>
           </div>
         </div>
       </div>
