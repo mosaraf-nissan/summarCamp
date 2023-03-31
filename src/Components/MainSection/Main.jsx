@@ -5,6 +5,8 @@ import Cart from "../SideCart/Cart";
 const Main = () => {
   const [data, setData] = useState([]);
   const [singleBlog, setSingleBlog] = useState([]);
+  const [totalRead, setTotalRead] = useState([]);
+  console.log(totalRead);
   console.log(singleBlog);
 
   useEffect(() => {
@@ -12,6 +14,10 @@ const Main = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+  const handleReadCount = (blog) => {
+    const newReadTime = [...totalRead, blog];
+    setTotalRead(newReadTime);
+  };
 
   const handleBookmark = (blog) => {
     const newBlog = [...singleBlog, blog];
@@ -27,11 +33,12 @@ const Main = () => {
               blog={blog}
               key={blog.id}
               handleBookmark={handleBookmark}
+              handleReadCount={handleReadCount}
             ></Card>
           ))}
         </div>
         <div className=" bg-indigo-400 rounded-3xl text-white md:col-span-3 text-center">
-          <Cart data={singleBlog}></Cart>
+          <Cart newData={totalRead} data={singleBlog}></Cart>
         </div>
       </div>
     </div>

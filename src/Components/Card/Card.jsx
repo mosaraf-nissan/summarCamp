@@ -2,11 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import React from "react";
 
-const Card = ({ blog, handleBookmark }) => {
+const Card = ({ blog, handleBookmark, handleReadCount }) => {
   const { id, title, authorImage, image, name, readTime, Publish } = blog;
 
   return (
-    <div className=" md:w-[700px] mx-auto mb-5">
+    <div className="  mx-auto mb-5">
       <div className="card card-compact w-auto border-2 border-orange-500 h-[500px] bg-base-100 shadow-xl">
         <figure>
           <img className="w-full" src={image} alt="Cover Photo" />
@@ -33,7 +33,12 @@ const Card = ({ blog, handleBookmark }) => {
           <h1 className="card-title text-4xl">{title}</h1>
           <p>#beginners #Programming</p>
           <div className="leading-loose card-actions">
-            <button className="text-blue-500">Mark as read</button>
+            <button
+              onClick={() => handleReadCount(blog)}
+              className="text-blue-500"
+            >
+              Mark as read
+            </button>
           </div>
         </div>
       </div>

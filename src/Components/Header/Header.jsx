@@ -10,7 +10,7 @@ const Header = () => {
           </a>
         </div>
         <div>
-          <div>
+          <div className="mr-5">
             <label className="btn btn-ghost btn-circle avatar border-2 border-orange-600">
               <div>
                 <img src="/images/react.png" alt="" />
