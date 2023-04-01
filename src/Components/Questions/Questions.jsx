@@ -8,13 +8,13 @@ const Questions = () => {
         <option selected className="text-bold">
           Props vs state?
         </option>
-        <option disabled selected>
+        <option disabled>
           "props" (short for "properties") is an object of arbitrary
         </option>
         <option disabled>
           inputs a React function component accepts as the first argument.
         </option>
-        <option disabled selected>
+        <option disabled>
           "state" is data that changes over the lifetime of a specific instance
           of a React component.
         </option>
