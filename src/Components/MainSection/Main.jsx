@@ -20,7 +20,6 @@ const Main = () => {
   };
 
   const handleBookmark = (blog) => {
-    console.log(blog.id, "fjksdkf");
     const newBlog = [...singleBlog, blog];
     setSingleBlog(newBlog);
   };

@@ -17,7 +17,7 @@ const Cart = ({ data, newData }) => {
       </h1>
       {data.map((title) => (
         <div className="py-1">
-          <h3 className="h-20 border-2 bg-slate-100 text-black items-center flex justify-center mb-5 mt-5 font-semibold rounded-lg">
+          <h3 className="h-20 border-2 bg-slate-100 text-black items-center flex justify-center mt-5 font-semibold rounded-lg">
             {title.title}
           </h3>
         </div>
