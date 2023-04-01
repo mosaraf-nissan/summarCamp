@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import Cart from "../SideCart/Cart";
 import Questions from "../Questions/Questions";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Main = () => {
   const [data, setData] = useState([]);
   const [singleBlog, setSingleBlog] = useState([]);
   const [totalRead, setTotalRead] = useState([]);
-  console.log(totalRead);
-  console.log(singleBlog);
 
   useEffect(() => {
     fetch("data.json")
@@ -16,14 +16,23 @@ const Main = () => {
       .then((data) => setData(data));
   }, []);
   const handleReadCount = (blog) => {
-    console.log(blog)
+    console.log(blog);
     const newReadTime = [...totalRead, blog];
     setTotalRead(newReadTime);
   };
 
-  const handleBookmark = (title) => {
-    const newBlog = [...singleBlog, title];
-    setSingleBlog(newBlog);
+  const notify = () => toast("Data already added");
+
+  const handleBookmark = (blog) => {
+    const exist = singleBlog.find((item) => item.id === blog.id);
+    if (!exist) {
+      const newBlog = [...singleBlog, blog];
+      setSingleBlog(newBlog);
+    } else {
+      notify();
+      const newBlog = [...singleBlog, blog];
+      setSingleBlog(newBlog);
+    }
   };
 
   return (
@@ -44,6 +53,7 @@ const Main = () => {
           <Cart newData={totalRead} data={singleBlog}></Cart>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
