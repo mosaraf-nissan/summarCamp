@@ -6,8 +6,8 @@ const Card = ({ blog, handleBookmark, handleReadCount }) => {
   const { id, title, authorImage, image, name, readTime, Publish } = blog;
 
   return (
-    <div className="  mx-auto mb-5">
-      <div className="card card-compact w-auto border-2 border-orange-500 h-[500px] bg-base-100 shadow-xl">
+    <div className="  mx-auto mb-5 select-none">
+      <div className="card card-compact w-auto border-2  h-[500px] bg-base-100 shadow-xl">
         <figure>
           <img className="w-full" src={image} alt="Cover Photo" />
         </figure>
